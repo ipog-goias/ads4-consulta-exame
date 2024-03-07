@@ -23,25 +23,27 @@ public interface IService<T,N> {
 
     /**
      * Busca uma entity de acordo com um id especificado
+     * @see <a href="https://www.oracle.com/br/technical-resources/article/java/erros-java-exceptions.html">...</a>
      * @param id
      * @return
      */
-    public T readById(N id);
+    public T readById(N id) throws Exception;
 
     /**
      * Retorna uma lista de List<T>
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">...</a>
      * @return
      */
-    public List<T> read();
+    public List<T> read() throws Exception;
 
     /**
      *
      * @param id para identificar o registro a ser atualizado
      * @param entity valores que serão atualizado durante a operação de persitência
+     * @see <a href="https://www.oracle.com/br/technical-resources/article/java/erros-java-exceptions.html">...</a>
      * @return
      */
-    public T update(N id, T entity);
+    public T update(N id, T entity) throws Exception;
 
     /**
      *
