@@ -2,8 +2,10 @@ package br.edu.ipog.consulta.service;
 
 import br.edu.ipog.consulta.interfaces.IService;
 import br.edu.ipog.consulta.model.Aluno;
+import br.edu.ipog.consulta.repository.AlunoRepository;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +13,9 @@ import java.util.List;
 @Slf4j //anotação responsável para habilitar a parte de logging do projeto.
 @Service //layer service ou camada de negócio.
 public class AlunoService implements IService<Aluno, Integer>{
+
+    @Autowired //injeção de dependência
+    public AlunoRepository alunoRepository;
 
     @Override
     @Transactional
