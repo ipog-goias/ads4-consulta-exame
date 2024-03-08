@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Slf4j
-@Service
+@Slf4j //anotação responsável para habilitar a parte de logging do projeto.
+@Service //layer service ou camada de negócio.
 public class AlunoService implements IService<Aluno, Integer>{
 
     @Override
